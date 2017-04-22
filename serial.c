@@ -54,12 +54,12 @@ void simulate_read_interrupt(){
   if (char_in) {
 	 UDR0 = char_in;
 	 //EOF or CTRL-F to exit
-	 if (UDR0 == EOF || UDR0 == 0xFF || UDR0 == 0x06 ) {
+	 if (/*UDR0 == EOF ||*/ UDR0 == 0xFF || UDR0 == 0x06 ) {
 		sim.exit = exit_REQ;
 	 }
 	 //debugging
 	 if (UDR0 == '%') { 
-		printf("%ld %f\n",sim.masterclock,(double)sim.sim_time);
+		printf("%llu %f\n",sim.masterclock,(double)sim.sim_time);
 	 }
 	 interrupt_SERIAL_RX();
   }

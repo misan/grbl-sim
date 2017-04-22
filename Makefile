@@ -17,11 +17,11 @@
 #  along with Grbl.  If not, see <http://www.gnu.org/licenses/>.
 
 # PLATFORM   = WINDOWS
-# PLATFORM   = OSX
-PLATFORM   = LINUX
+PLATFORM   = OSX
+#PLATFORM   = LINUX
 
 #The original grbl code, except those files overriden by sim
-GRBL_BASE_OBJECTS =   ../protocol.o ../planner.o ../settings.o ../print.o ../nuts_bolts.o  ../stepper.o ../gcode.o ../spindle_control.o ../motion_control.o ../limits.o ../coolant_control.o ../probe.o ../system.o 
+GRBL_BASE_OBJECTS =   ../protocol.o ../planner.o ../jog.o ../settings.o ../print.o ../nuts_bolts.o  ../stepper.o ../gcode.o ../spindle_control.o ../motion_control.o ../limits.o ../coolant_control.o ../probe.o ../system.o 
 # grbl files that have simulator overrrides 
 GRBL_OVERRIDE_OBJECTS =  ../main.o ../serial.o ../report.o
 
